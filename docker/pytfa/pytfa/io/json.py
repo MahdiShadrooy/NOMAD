@@ -52,7 +52,7 @@ def load_json_model(filepath):
     with open(filepath, 'r') as fid:
         obj = json.load(fid)
 
-    model = model_from_dict(obj)
+    model = model_from_dict(obj, solver='optlang-glpk')
     return model
 
 
